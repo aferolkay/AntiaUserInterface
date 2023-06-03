@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/logo">
+        <file>resources/whiteBackground.png</file>
+        <file>resources/table.png</file>
+        <file>resources/secilen.png</file>
+    </qresource>
+</RCC>
