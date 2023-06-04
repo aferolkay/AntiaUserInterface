@@ -20,7 +20,7 @@ Server::Server(QObject *parent) //: QObject(parent)
 
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(confirmConnection()));
-    timer->start(3000);
+    timer->start(4000);
 }
 
 Server::~Server()
