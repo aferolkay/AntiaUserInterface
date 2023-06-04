@@ -26,6 +26,7 @@ public slots:
     void sendMessage(QTcpSocket *socket, QString message);
     void displayMessage(const QString &str);
     void broadcastMessage(QString message);
+    void confirmConnection();
 protected slots:
 
 private slots:

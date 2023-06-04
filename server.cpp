@@ -17,6 +17,10 @@ Server::Server(QObject *parent) //: QObject(parent)
        qInfo()<< QString("Unable to start the server: %1.").arg(m_server->errorString()) ;
         exit(EXIT_FAILURE);
     }
+
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(confirmConnection()));
+    timer->start(3000);
 }
 
 Server::~Server()
@@ -131,4 +135,10 @@ void Server::broadcastMessage(QString message){
 void Server::displayMessage(const QString& str)
 {
     qInfo()<<str;
+}
+
+void Server::confirmConnection(){
+    foreach(QTcpSocket* socket , connection_set){
+        sendMessage(socket,QString("InterfaceON"));
+    }
 }
