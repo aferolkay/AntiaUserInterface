@@ -3,5 +3,6 @@
         <file>resources/whiteBackground.png</file>
         <file>resources/table.png</file>
         <file>resources/secilen.png</file>
+        <file>resources/statistics.png</file>
     </qresource>
 </RCC>

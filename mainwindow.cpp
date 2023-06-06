@@ -26,7 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
     connect( this , &MainWindow::newUserInput , myTrainingBuddy , &trainingBuddy::getMessage );
 
     myInfoDisplay = new infoDisplay(this);
-    myInfoDisplay->show();
+    isInfoWindowON = false;
+
 }
 
 MainWindow::~MainWindow()
@@ -148,4 +149,20 @@ void MainWindow::on_gameModeButton_clicked()
     emit newUserInput(myTrainingBuddy->getMessage());
 }
 
+
+
+
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    if (isInfoWindowON){
+        myInfoDisplay->hide();
+    }
+    else {
+        myInfoDisplay->show();
+    }
+    isInfoWindowON = !isInfoWindowON;
+
+}
 

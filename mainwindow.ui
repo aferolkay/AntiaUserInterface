@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1303</width>
-    <height>666</height>
+    <width>1296</width>
+    <height>681</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -288,7 +288,7 @@ background-color: 	rgb(82, 100, 101)	;
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>60</y>
+      <y>50</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -301,7 +301,7 @@ background-color: 	rgb(82, 100, 101)	;
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>120</y>
+      <y>110</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -314,7 +314,7 @@ background-color: 	rgb(82, 100, 101)	;
     <property name="geometry">
      <rect>
       <x>560</x>
-      <y>180</y>
+      <y>170</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -366,7 +366,7 @@ background-color: 	rgb(82, 100, 101)	;
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>50</y>
+      <y>40</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -379,7 +379,7 @@ background-color: 	rgb(82, 100, 101)	;
     <property name="geometry">
      <rect>
       <x>390</x>
-      <y>220</y>
+      <y>230</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -405,7 +405,7 @@ background-color: 	rgb(82, 100, 101)	;
     <property name="geometry">
      <rect>
       <x>740</x>
-      <y>150</y>
+      <y>140</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -418,7 +418,7 @@ background-color: 	rgb(82, 100, 101)	;
     <property name="geometry">
      <rect>
       <x>740</x>
-      <y>60</y>
+      <y>50</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -444,7 +444,7 @@ background-color: 	rgb(82, 100, 101)	;
     <property name="geometry">
      <rect>
       <x>740</x>
-      <y>190</y>
+      <y>180</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -457,7 +457,7 @@ background-color: 	rgb(82, 100, 101)	;
     <property name="geometry">
      <rect>
       <x>740</x>
-      <y>100</y>
+      <y>90</y>
       <width>31</width>
       <height>31</height>
      </rect>
@@ -482,7 +482,7 @@ background-color: 	rgb(82, 100, 101)	;
    <widget class="QLabel" name="label_16">
     <property name="geometry">
      <rect>
-      <x>510</x>
+      <x>520</x>
       <y>360</y>
       <width>31</width>
       <height>31</height>
@@ -682,7 +682,7 @@ background-color: rgb(85, 103, 104);
    <widget class="QLabel" name="label_25">
     <property name="geometry">
      <rect>
-      <x>580</x>
+      <x>570</x>
       <y>360</y>
       <width>31</width>
       <height>31</height>
@@ -734,13 +734,31 @@ background-color: rgb(85, 103, 104);
      <string>Random Mode</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_2">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>530</y>
+      <width>151</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">image: url(:/logo/resources/statistics.png);
+background-color:   ;
+background-color: rgb(15, 63, 139);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
    <widget class="QFrame" name="perde">
     <property name="geometry">
      <rect>
       <x>280</x>
       <y>0</y>
-      <width>541</width>
-      <height>661</height>
+      <width>531</width>
+      <height>641</height>
      </rect>
     </property>
     <property name="styleSheet">

@@ -53,13 +53,17 @@ private slots:
 
     void on_gameModeButton_clicked();
 
+
+
+    void on_pushButton_2_clicked();
+
 signals:
     void newUserInput(QString message);
 
 private:
     Ui::MainWindow *ui;
     Server* server;
-
+    bool isInfoWindowON;
 };
 
 #endif // MAINWINDOW_H

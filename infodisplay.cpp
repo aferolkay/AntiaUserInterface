@@ -8,7 +8,6 @@ infoDisplay::infoDisplay(QWidget *parent) :
     ui->setupUi(this);
     setTable("QString throws" , "QString returns" );
     updateTable();
-
 }
 
 infoDisplay::~infoDisplay()
