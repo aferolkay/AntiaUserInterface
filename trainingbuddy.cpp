@@ -57,13 +57,13 @@ QString trainingBuddy::getMessage()
 {
     QString message;
     message = QString("[%1 %2 %3 %4 %5 %6 %7]") .arg(
-                    QString::number(spin),
-                    QString::number(frequency),
-                    QString::number(speed),
-                    QString::number(horizontal),
-                    QString::number(vertical),
-                    QString::number(operationMode),
-                    QString::number(random));
+                    QString::number(spin+2),
+                    QString::number(frequency+2),
+                    QString::number(speed+2),
+                    QString::number(horizontal+2),
+                    QString::number(vertical+2),
+                    QString::number(operationMode+2),
+                    QString::number(random+2));
     qInfo() << message;
     return message;
 }

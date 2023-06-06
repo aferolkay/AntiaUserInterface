@@ -8,6 +8,7 @@
 #include "trainingbuddy.h"
 #include<QDebug>
 #include "globalVariables.h"
+#include "infodisplay.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -25,6 +26,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     trainingBuddy* myTrainingBuddy;
+    infoDisplay* myInfoDisplay;
 
 public slots:
     void placeBall();

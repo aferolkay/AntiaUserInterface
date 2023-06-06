@@ -15,6 +15,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    infodisplay.cpp \
     main.cpp \
     mainwindow.cpp \
     server.cpp \
@@ -22,11 +23,13 @@ SOURCES += \
 
 HEADERS += \
     globalVariables.h \
+    infodisplay.h \
     mainwindow.h \
     server.h \
     trainingbuddy.h
 
 FORMS += \
+    infodisplay.ui \
     mainwindow.ui
 
 # Default rules for deployment.

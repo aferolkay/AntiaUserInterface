@@ -24,6 +24,9 @@ MainWindow::MainWindow(QWidget *parent)
     myTrainingBuddy = new trainingBuddy(this);
     connect( this , &MainWindow::newUserInput , server , &Server::broadcastMessage );
     connect( this , &MainWindow::newUserInput , myTrainingBuddy , &trainingBuddy::getMessage );
+
+    myInfoDisplay = new infoDisplay(this);
+    myInfoDisplay->show();
 }
 
 MainWindow::~MainWindow()
