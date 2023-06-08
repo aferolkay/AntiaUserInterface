@@ -18,7 +18,8 @@ public:
 public slots:
     void updateTable();
 
-    void setTable(QString throws, QString returns);
+    void setReturns(QString returns);
+    void setThrows(QString throws);
 private:
     Ui::infoDisplay *ui;
     int frequencyThrown[3] = {0,0,0};

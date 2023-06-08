@@ -57,20 +57,33 @@ void Server::readSocket()
     QTcpSocket* socket = reinterpret_cast<QTcpSocket*>(sender());
 
     QByteArray data = socket->readAll();
-    //qDebug() << "Received data from client:" << data;
+
+    qDebug() << "Received data from client:" << data;
 
     QString str = QString(data);
 
-    QStringList strList = str.split( ":" );
+    if ( str.contains("Thrown") ){
+        str = str.remove("Thrown:");
+        emit newThrowStatistics(str);
+    }
+    else if( str.contains("Returned") ){
+        str = str.remove("Returned:");
+        emit newReturnedStatistics(str);
+    }
+    else{
+        QStringList strList = str.split( ":" );
 
-    QStringList location = strList[1].split(",");
+        QStringList location = strList[1].split(",");
 
-    last_x = location[0].toInt();
+        last_x = location[0].toInt();
 
-    last_y = location[1].toInt();
+        last_y = location[1].toInt();
 
-    emit newLocation();
-    // placeBall(location[0].toInt(),location[1].toInt());
+        emit newLocation();
+        // placeBall(location[0].toInt(),location[1].toInt());
+    }
+
+
 
 
 }

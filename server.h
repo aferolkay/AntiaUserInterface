@@ -34,6 +34,9 @@ private slots:
 signals:
     void newMessage(QString);
     void newLocation();
+    void newThrowStatistics(QString);
+    void newReturnedStatistics(QString);
+
 private:
     QTcpServer* m_server;
     QSet<QTcpSocket*> connection_set;

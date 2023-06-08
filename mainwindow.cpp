@@ -27,6 +27,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     myInfoDisplay = new infoDisplay(this);
     isInfoWindowON = false;
+    connect( server , &Server::newThrowStatistics , myInfoDisplay , &infoDisplay::setThrows );
+    connect( server , &Server::newReturnedStatistics , myInfoDisplay , &infoDisplay::setReturns );
 
 }
 
@@ -41,7 +43,7 @@ void MainWindow::placeBall(){
 
     qDebug() << QString("last_x = %1 | last_y = %2").arg(x).arg(y);
 
-    QGraphicsEllipseItem* circle = new QGraphicsEllipseItem(x,y,10,10);
+    QGraphicsEllipseItem* circle = new QGraphicsEllipseItem(x,y,15,15);
     y < 274 ?  circle->setBrush(Qt::red) : circle->setBrush(Qt::green)  ;
     scene->addItem(circle);
     ballList.append(circle);

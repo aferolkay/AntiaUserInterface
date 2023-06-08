@@ -6,7 +6,6 @@ infoDisplay::infoDisplay(QWidget *parent) :
     ui(new Ui::infoDisplay)
 {
     ui->setupUi(this);
-    setTable("QString throws" , "QString returns" );
     updateTable();
 }
 
@@ -45,13 +44,13 @@ void infoDisplay::updateTable()
 
 }
 
-void infoDisplay::setTable(QString throws , QString returns )
-{
-    throws = "[0 1 20 3 4 0 1 2 0 1 2 0 1 2 3 4 0 1 2 3 4]";
-    returns = "[0 1 2 3 4 0 1 2 0 1 2 0 1 2 3 4 0 1 2 3 4]";
 
-    QStringList throws_parsed = throws.remove("[").remove("]").split(" ");
-    QStringList returns_parsed = returns.remove("[").remove("]").split(" ");
+void infoDisplay::setThrows(QString throws )
+{
+
+
+    qInfo() << QString("throws infosu geldi ve bu şekil ilettim: %1").arg(throws);
+               QStringList throws_parsed = throws.remove("[").remove("]").remove(",").split(" ");
 
     spinThrown[0] = throws_parsed[0].toInt();
     spinThrown[1] = throws_parsed[1].toInt();
@@ -68,7 +67,7 @@ void infoDisplay::setTable(QString throws , QString returns )
     speedThrown[2] = throws_parsed[10].toInt();
 
     horizontalThrown[0] = throws_parsed[11].toInt();
-    horizontalThrown[1] =     throws_parsed[12].toInt();
+    horizontalThrown[1] = throws_parsed[12].toInt();
     horizontalThrown[2] = throws_parsed[13].toInt();
     horizontalThrown[3] = throws_parsed[14].toInt();
     horizontalThrown[4] = throws_parsed[15].toInt();
@@ -78,6 +77,14 @@ void infoDisplay::setTable(QString throws , QString returns )
     verticalThrown[2] = throws_parsed[18].toInt();
     verticalThrown[3] = throws_parsed[19].toInt();
     verticalThrown[4] = throws_parsed[20].toInt();
+    updateTable();
+}
+
+void infoDisplay::setReturns( QString returns )
+{
+
+    qInfo() << QString("returned infosu geldi ve bu şekil ilettim: %1").arg(returns);
+               QStringList returns_parsed = returns.remove("[").remove("]").remove(",").split(" ");
 
     spinReturn[0] = returns_parsed[0].toInt();
     spinReturn[1] = returns_parsed[1].toInt();
@@ -104,6 +111,8 @@ void infoDisplay::setTable(QString throws , QString returns )
     verticalReturn[2] = returns_parsed[18].toInt();
     verticalReturn[3] = returns_parsed[19].toInt();
     verticalReturn[4] = returns_parsed[20].toInt();
+
+    updateTable();
 }
 
 
