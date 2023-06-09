@@ -58,7 +58,8 @@ void Server::readSocket()
 
     QByteArray data = socket->readAll();
 
-    qDebug() << "Received data from client:" << data;
+    //qDebug() << "Received data from client:" << data.toStdString() ;
+    qDebug() << "Received data from client:" << data.toStdString() ;
 
     QString str = QString(data);
 

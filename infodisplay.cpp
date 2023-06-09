@@ -47,10 +47,20 @@ void infoDisplay::updateTable()
 
 void infoDisplay::setThrows(QString throws )
 {
-
-
+    /*
     qInfo() << QString("throws infosu geldi ve bu şekil ilettim: %1").arg(throws);
-               QStringList throws_parsed = throws.remove("[").remove("]").remove(",").split(" ");
+               QStringList throws_parsed = throws.remove("[").remove("]").remove(",").remove("\n").remove(".").split(" ");
+    */
+    QString originalString = throws;
+    QString allowedCharacters = "0123456789 ";
+
+    QString filteredString;
+    for (const QChar& ch : originalString) {
+        if (allowedCharacters.contains(ch, Qt::CaseInsensitive)) {
+            filteredString.append(ch);
+        }
+    }
+    QStringList throws_parsed = filteredString.split(" ");
 
     spinThrown[0] = throws_parsed[0].toInt();
     spinThrown[1] = throws_parsed[1].toInt();
@@ -82,9 +92,21 @@ void infoDisplay::setThrows(QString throws )
 
 void infoDisplay::setReturns( QString returns )
 {
-
+    /*
     qInfo() << QString("returned infosu geldi ve bu şekil ilettim: %1").arg(returns);
-               QStringList returns_parsed = returns.remove("[").remove("]").remove(",").split(" ");
+               QStringList returns_parsed = returns.remove("[").remove("]").remove(",").remove("\n").remove(".").split(" ");
+    */
+    QString originalString = returns;
+    QString allowedCharacters = "0123456789 ";
+
+    QString filteredString;
+    for (const QChar& ch : originalString) {
+        if (allowedCharacters.contains(ch, Qt::CaseInsensitive)) {
+            filteredString.append(ch);
+        }
+    }
+    QStringList returns_parsed = filteredString.split(" ");
+
 
     spinReturn[0] = returns_parsed[0].toInt();
     spinReturn[1] = returns_parsed[1].toInt();
